@@ -1209,7 +1209,7 @@ Pengalaman baru bermain di APK`;
     const mainElement = document.querySelector(".main");
     if (mainElement) {
       mainElement.style.backgroundImage =
-        "url('http://plcl.me/images/FKAVX.jpg')";
+        "url('http://plcl.me/images/JxCDp.jpg')";
       mainElement.style.backgroundColor = "#000000";
       mainElement.style.backgroundPosition = "top center";
       mainElement.style.backgroundRepeat = "no-repeat";
