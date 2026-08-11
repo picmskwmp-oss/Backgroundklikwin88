@@ -1209,7 +1209,7 @@ Pengalaman baru bermain di APK`;
     const mainElement = document.querySelector(".main");
     if (mainElement) {
       mainElement.style.backgroundImage =
-        "url('https://www.image2url.com/r2/default/files/1786047883765-5ba05ed7-723f-4916-8a9c-65f3a98cdc3d.png')";
+        "url('http://plcl.me/images/FKAVX.jpg')";
       mainElement.style.backgroundColor = "#000000";
       mainElement.style.backgroundPosition = "top center";
       mainElement.style.backgroundRepeat = "no-repeat";
