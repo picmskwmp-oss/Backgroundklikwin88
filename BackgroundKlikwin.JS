@@ -544,7 +544,7 @@ Pengalaman baru bermain di APK`;
 
     if (mainElement && window.innerWidth <= 768) {
       mainElement.style.backgroundImage =
-        "url('https://www.image2url.com/r2/default/files/1786048282416-109f39e7-a8ed-47cc-a82b-a2d1685a8db5.png')";
+        "url('http://plcl.me/images/XxaUh.jpg')";
       mainElement.style.backgroundColor = "#000000";
       mainElement.style.backgroundPosition = "top center";
       mainElement.style.backgroundRepeat = "no-repeat";
