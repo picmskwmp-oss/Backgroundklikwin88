@@ -1,6 +1,12 @@
+/*
+ * KLIKWIN88 CUSTOM + J24 SOSMED
+ * GitHub/CDN-safe build - 2026-08-12
+ * Upload file ini sebagai .js (bukan .txt)
+ */
 (function () {
-  if (window.__kwCustomInit) return;   // <-- kunci: cukup jalan sekali
-  window.__kwCustomInit = true;
+  if (window.__kwCustomInitV20260812) return;
+  window.__kwCustomInitV20260812 = true;
+  console.info("[KLIKWIN88] custom core loaded");
 
 function isMobile() {
   const userAgent = navigator.userAgent.toLowerCase();
@@ -1345,4 +1351,258 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 })();
 
-})();  // <-- penutup guard "run once" (window.__kwCustomInit)
+})(); // end KLIKWIN88 core
+
+// =========================================================
+// J24 SOSMED - VERTICAL UP | GREEN THEME | ALL DEVICE
+// Digabung langsung ke custom JS agar cukup 1 file .js di GitHub
+// =========================================================
+(function initJ24Sosmed() {
+  if (window.__J24SosmedInit) return;
+  window.__J24SosmedInit = true;
+
+  function injectJ24() {
+    if (!document.head || !document.body) {
+      requestAnimationFrame(injectJ24);
+      return;
+    }
+
+    // Pengaman agar tidak tampil dua kali
+    if (document.querySelector('.J24-sosmed')) return;
+
+    // Load font Raleway
+    if (!document.querySelector('link[data-j24-font="raleway"]')) {
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'stylesheet';
+      fontLink.href = 'https://fonts.googleapis.com/css?family=Raleway:900&display=swap';
+      fontLink.setAttribute('data-j24-font', 'raleway');
+      document.head.appendChild(fontLink);
+    }
+
+    // CSS J24
+    if (!document.getElementById('j24-sosmed-style')) {
+      const style = document.createElement('style');
+      style.id = 'j24-sosmed-style';
+      style.textContent = `
+        :root{
+          --accent-color:#9ff600;
+          --base-color:#006400;
+        }
+
+        .hamburg{
+          position:absolute;
+          width:55px;
+          height:auto;
+          left:1px;
+          padding:.6rem;
+          border:solid 1px var(--accent-color);
+          background-image:linear-gradient(20deg,#1a4700 10%,#71bf01 40%,#1a4700 100%);
+          border-radius:10px;
+          z-index:2;
+          box-shadow:0 0 12px 1px rgba(255,255,255,.7);
+          box-sizing:border-box;
+        }
+
+        .J24-sosmed{
+          display:block;
+          cursor:pointer;
+          position:fixed;
+          bottom:15%;
+          left:1px;
+          font-family:Raleway,sans-serif;
+          z-index:2;
+        }
+
+        .J24-sosmed ul{
+          margin:0;
+          padding:0;
+          position:relative;
+        }
+
+        .J24-sosmed ul li{
+          position:absolute;
+          list-style:none;
+          transform:translateY(0);
+          transition:all .45s ease;
+          opacity:0;
+        }
+
+        .J24-sosmed.open ul li:nth-child(1){transform:translateY(-70px);transition-delay:.05s;opacity:1;}
+        .J24-sosmed.open ul li:nth-child(2){transform:translateY(-140px);transition-delay:.10s;opacity:1;}
+        .J24-sosmed.open ul li:nth-child(3){transform:translateY(-210px);transition-delay:.15s;opacity:1;}
+        .J24-sosmed.open ul li:nth-child(4){transform:translateY(-280px);transition-delay:.20s;opacity:1;}
+        .J24-sosmed.open ul li:nth-child(5){transform:translateY(-350px);transition-delay:.25s;opacity:1;}
+        .J24-sosmed.open ul li:nth-child(6){transform:translateY(-420px);transition-delay:.30s;opacity:1;}
+        .J24-sosmed.open ul li:nth-child(7){transform:translateY(-490px);transition-delay:.35s;opacity:1;}
+
+        .J24-sosmed ul li a img{
+          height:90%;
+          width:auto;
+          max-width:90%;
+          object-fit:contain;
+        }
+
+        .J24-sosmed ul li a{
+          display:flex;
+          width:50px;
+          height:50px;
+          border:solid 1px var(--accent-color);
+          border-radius:8px;
+          justify-content:center;
+          align-items:center;
+          background-color:#000;
+          pointer-events:none;
+          box-sizing:border-box;
+          text-decoration:none;
+        }
+
+        .J24-sosmed.open ul li a{pointer-events:auto;}
+
+        .J24-sosmed .bar1,
+        .J24-sosmed .bar2,
+        .J24-sosmed .bar3{
+          width:80%;
+          height:5px;
+          background-color:#fff;
+          margin:6px auto;
+          transition:.4s;
+          position:relative;
+          transform:translateY(-1px);
+        }
+
+        .J24-sosmed.open .bar1{transform:translate(0,10px) rotate(-225deg);}
+        .J24-sosmed.open .bar2{opacity:0;transform:translate(0,-1px) rotate(-225deg);}
+        .J24-sosmed.open .bar3{transform:translate(0,-12px) rotate(-315deg);}
+
+        .J24-sosmed ul li > div{
+          position:absolute;
+          transition:all .3s ease;
+          opacity:0;
+          scale:.1;
+          font-family:"Times New Roman",sans-serif;
+          font-size:medium;
+          background-image:linear-gradient(20deg,#1a4700 10%,#71bf01 40%,#1a4700 100%);
+          color:#fff;
+          white-space:nowrap;
+          border:solid 1px var(--accent-color);
+          padding:3px 7px;
+          border-radius:8px;
+          left:60px;
+          top:50%;
+          transform:translateY(-50%);
+          pointer-events:none;
+        }
+
+        .J24-sosmed ul li:hover > div{
+          opacity:1;
+          scale:1;
+        }
+
+        .J24-sosmed .attention{
+          position:relative;
+          clip-path:polygon(0 0,100% 0,100% 75%,1% 75%,22% 100%,22% 75%,0 75%);
+          width:100px;
+          white-space:nowrap;
+          height:25px;
+          margin-bottom:5px;
+          left:1px;
+          background-color:transparent;
+          cursor:default;
+          color:#fff;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          padding-bottom:10px;
+          opacity:0;
+        }
+
+        .J24-sosmed .whore{animation:j24Flicker .6s infinite;}
+        .J24-sosmed .whore:hover{animation-duration:10s;}
+
+        @keyframes j24Flicker{
+          0%{opacity:1;}
+          50%{opacity:0;}
+          100%{opacity:1;}
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
+    // HTML J24
+    const wrapper = document.createElement('div');
+    wrapper.className = 'J24-sosmed';
+    wrapper.innerHTML = `
+      <div class="attention whore">Click Disini</div>
+
+      <div class="hamburg" role="button" tabindex="0" aria-label="Buka menu sosial media" aria-expanded="false">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
+      <ul>
+        <li>
+          <a href="https://linkshortener.live/wa-rtt-klikwin88" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.postimg.cc/8z1tpjNt/KW-WHATSAPP-200.webp" alt="Whatsapp">
+          </a>
+          <div>Whatsapp</div>
+        </li>
+
+        <li>
+          <a href="https://linkshortener.live/teleofficial-klikwin88" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.postimg.cc/N0n4kDTT/KW-TELEGRAM-200.webp" alt="Telegram">
+          </a>
+          <div>Telegram</div>
+        </li>
+
+        <li>
+          <a href="https://linkshortener.live/rtp-klikwin" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.postimg.cc/sxd4t2TC/KW-RTP-200.webp" alt="Rtp Maxwin">
+          </a>
+          <div>Rtp Maxwin</div>
+        </li>
+
+        <li>
+          <a href="https://linkshortener.live/pengaduanmember" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.postimg.cc/kMKcWx5s/KW-PENGADUAN-200.webp" alt="Pengaduan Layanan">
+          </a>
+          <div>Pengaduan Layanan</div>
+        </li>
+
+        <li>
+          <a href="https://linkshortener.live/livescore-klikwin88" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.postimg.cc/d3r41Chr/KW-JADWALBOLA.webp" alt="Jadwal Bola">
+          </a>
+          <div>Jadwal Bola</div>
+        </li>
+      </ul>
+    `;
+
+    document.body.appendChild(wrapper);
+
+    const hamburg = wrapper.querySelector('.hamburg');
+    const attention = wrapper.querySelector('.attention.whore');
+
+    function toggleJ24() {
+      const isOpen = wrapper.classList.toggle('open');
+      hamburg.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (attention) attention.classList.remove('whore');
+    }
+
+    hamburg.addEventListener('click', toggleJ24);
+    hamburg.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleJ24();
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', injectJ24, { once: true });
+  } else {
+    injectJ24();
+  }
+})();
+
+console.info("[KLIKWIN88] J24 module registered");
