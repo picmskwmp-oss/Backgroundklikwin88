@@ -355,7 +355,7 @@ if (isMobile()) {
     }
 
     .navbar {
-      background: linear-gradient(to bottom, #a4ff00 0%, #62b515 30%, #006c06 100%) !important;
+      background: linear-gradient(to bottom, #315202 0%, #62b515 30%, #006c06 100%) !important;
       color: #ffffff !important;
       border: none !important;
     }
@@ -632,7 +632,7 @@ Pengalaman baru bermain di APK`;
       background: radial-gradient(farthest-corner at 20% 0, #41760c 0%, #0d3200 50%) !important;
     }
     .game-title {
-      background: linear-gradient(to bottom, #a4ff00 0%, #62b515 30%, #006c06 100%) !important;
+      background: linear-gradient(to bottom, #315202 0%, #62b515 30%, #006c06 100%) !important;
       color: white !important;
       padding: 5px 10px !important;
       width: fit-content !important;
@@ -1021,7 +1021,7 @@ Pengalaman baru bermain di APK`;
     }
 
     .navbar {
-      background: linear-gradient(to bottom, #a4ff00 0%, #62b515 30%, #006c06 100%) !important;
+      background: linear-gradient(to bottom, #315202 0%, #62b515 30%, #006c06 100%) !important;
       color: #ffffff !important;
       border: none !important;
     }
