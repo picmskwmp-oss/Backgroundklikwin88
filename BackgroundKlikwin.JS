@@ -291,7 +291,7 @@ if (isMobile()) {
       color: white !important;
       border: none !important;
       border-radius: 50px !important;
-      border: 2px solid #81db01 !important;
+      border: 2px solid #315202!important;
       padding: 1px 10px !important;
       font-weight: bold !important;
       text-transform: uppercase !important;
@@ -315,7 +315,7 @@ if (isMobile()) {
       background: linear-gradient(to bottom, #d4ff00, #2e9800) !important;
       color: white !important;
       border-radius: 50px !important;
-      border: 2px solid #81db01 !important;
+      border: 2px solid #315202!important;
       font-weight: bold !important;
       text-transform: uppercase !important;
       padding: 1px 10px !important;
