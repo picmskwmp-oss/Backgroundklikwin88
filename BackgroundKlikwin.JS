@@ -1385,7 +1385,7 @@ document.addEventListener("DOMContentLoaded", function () {
       style.id = 'j24-sosmed-style';
       style.textContent = `
         :root{
-          --accent-color:#9ff600;
+          --accent-color:#315202;
           --base-color:#006400;
         }
 
