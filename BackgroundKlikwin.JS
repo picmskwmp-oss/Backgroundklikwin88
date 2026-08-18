@@ -338,7 +338,7 @@ if (isMobile()) {
     }
 
     .quick-footer-navbar a.grid-btn.active {
-      background-color: #67c700 !important;
+      background-color: #315202 !important;
       background-image: none !important;
       color: #ffffff !important;
     }
